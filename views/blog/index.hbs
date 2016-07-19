@@ -1,0 +1,18 @@
+<div class="content">
+    <h1>Blog Posts</h1>
+    <div class="inner-content">
+        {{#each posts}}
+            <div class="blog-index-item">
+                <a href="/blog/{{this._id}}">
+                    <h2 class="blog-item"> 
+					<div>
+						<img src="/images/icons/right-arrow.svg" class="blog-icon" /> <span class="animateHover"> {{this.title}}</span>
+					</div>
+				</h2>
+                </a>
+                <p>{{this.dateAdded}} </p>
+                <br>
+            </div>
+        {{/each}}
+    </div>
+</div>

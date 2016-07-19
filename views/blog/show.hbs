@@ -1,0 +1,13 @@
+<div class="content">
+	<h1>Blog Posts</h1>
+
+	<div class="inner-content">
+		<div class="blog-post">
+			{{#each post}}
+				<h2 class="blog-title">{{this.title}}</h2>
+				<p class="blog-date">By Michael Lee &nbsp; | &nbsp {{this.dateAdded}}</p>
+				<p class="blog-body">{{this.body}}</p>		
+			{{/each}}
+		</div>
+	</div>
+</div>
