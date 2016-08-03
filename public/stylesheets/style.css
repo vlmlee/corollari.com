@@ -134,9 +134,10 @@ strong {
 /* #SOCIALICONS */
 
 .social-icon {
-    width: 42px;
-    height: 42px;
+    width: 30px;
+    height: 30px;
     margin: 0 5px;
+    opacity: 0.5;
 }
 
 
@@ -253,27 +254,27 @@ nav {
 }
 
 .nav-sidebar {
-    padding-top: 20px;
+    padding-top: 10px;
 }
 
 .nav-social {
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
 .description {
     width: 160px;
     min-width: 160px;
-    padding-top: 40px;
+    padding-top: 30px;
     margin: 0 auto;
     font-size: 10px;
     line-height: 1.2em;
 }
 
 .description h2 {
-    font-family: Harmonia;
-    font-size: 2.25em;
+    font-family: 'Fira Mono';
+    font-size: 1.65em;
     margin-bottom: 15px;
-    width: 180px;
+    width: 200px;
 }
 
 .description p {
@@ -282,12 +283,26 @@ nav {
 
 .nav-footer {
     font-size: 0.8em;
-    margin-top: 30px;
+    margin-top: 20px;
     margin-right: 15px;
 }
 
 .nav-footer p {
     margin: 10px auto;
+}
+
+.menu {
+    visibility: hidden;
+    height: 40px;
+    width: 40px;
+    position: fixed;
+    top: 3%;
+    left: 2.5%;
+}
+
+.menu:hover {
+    transition: 0.75s ease;
+    transform: scale(1.2717);
 }
 
 
@@ -413,14 +428,21 @@ a:hover {
 
 .project-box {
     width: 100%;
-    height: 300px;
     margin: 40px 0 0 0;
+}
+
+.project-box:last-child {
+    margin-bottom: 60px;
+}
+
+.project-title:not(:first-child) {
+    margin-top: 60px;
 }
 
 .project-box h2 {
     font-size: 26px;
     font-weight: 300;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .project-box p {
@@ -446,10 +468,11 @@ a:hover {
 }
 
 .blog-title {
-    font-family: Montserrat;
-    font-size: 40px;
+    font-family: 'Fira Mono';
+    font-size: 2.5em;
     color: #333;
     margin-bottom: 10px;
+    font-weight: bold;
 }
 
 .blog-date {
@@ -462,9 +485,8 @@ a:hover {
 }
 
 .blog-body {
-    font-size: 16px;
+    font-size: 1.2em;
     margin-top: 30px;
-    font-weight: 300;
 }
 
 
@@ -652,7 +674,12 @@ textarea {
 
 @media (max-width: 900px) {
     nav {
-        display: none;
+        transition: 1.5s ease;
+    }
+    .menu {
+        visibility: visible;
+        z-index: 999;
+        transition: 0.75s ease;
     }
     main,
     .index,
@@ -688,7 +715,7 @@ textarea {
     }
 }
 
-@media (max-height: 950px) {
+@media (max-height: 900px) {
     .license {
         display: none;
     }

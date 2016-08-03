@@ -13,3 +13,5 @@ gulp.task('minify-js', function() {
         .pipe(uglify())
         .pipe(gulp.dest('public/javascripts'));
 });
+
+gulp.task('default', ['minify-js', 'minify-css']);
