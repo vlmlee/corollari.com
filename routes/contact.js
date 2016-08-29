@@ -1,7 +1,7 @@
-var express = require('express');
-var router = express.Router();
-var nodemailer = require('nodemailer');
-var password = process.env.BLOGPASSWORD;
+var express = require('express'),
+    router = express.Router(),
+    nodemailer = require('nodemailer'),
+    password = process.env.BLOGPASSWORD;
 
 router.get('/', function(req, res, next) {
     res.render('contact', { title: 'Contact', msg: 'Feel free to leave a message  =)' });

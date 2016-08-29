@@ -1,28 +1,28 @@
-var express = require('express');
-var router = express.Router();
-var mongodb = require('mongodb');
-var dateFormat = require('dateformat');
-var ObjectId = require('mongodb').ObjectID;
+var express = require('express'),
+    router = express.Router(),
+    mongodb = require('mongodb'),
+    dateFormat = require('dateformat');
+// var ObjectId = require('mongodb').ObjectID; // not needed for now
+
+var MongoClient = mongodb.MongoClient,
+    url = 'mongodb://localhost:27017/blog';
 
 router.get('/', function(req, res, next) {
-    var MongoClient = mongodb.MongoClient;
-    var url = 'mongodb://localhost:27017/blog';
-
     MongoClient.connect(url, function(err, db) {
         if (err) {
             console.log('Unable to connect to server');
         } else {
             var collection = db.collection('posts');
-            collection.find({}).toArray(function(err, content) {
+            collection.find({}).sort({createdAt: -1}).toArray(function(err, content) {
                 if (err) {
                     res.send(err);
                 } else if (content.length) {
                     for (var i = 0; i < content.length; i++) {
-                        timeStamp = content[i].dateAdded;
-                        content[i].dateAdded = dateFormat(timeStamp, "dddd, mmmm dS yyyy");
+                        timeStamp = content[i].createdAt;
+                        content[i].createdAt = dateFormat(timeStamp, "dddd, mmmm dS yyyy");
                     }
                     res.render('blog/index', {
-                        posts: content.reverse()
+                        posts: content
                     });
                 } else {
                     res.send('No documents found');
@@ -33,21 +33,18 @@ router.get('/', function(req, res, next) {
     });
 });
 
-router.get('/:id', function(req, res) {
-    var MongoClient = mongodb.MongoClient;
-    var url = 'mongodb://localhost:27017/blog';
-
+router.get('/:slug', function(req, res) {
     MongoClient.connect(url, function(err, db) {
         if (err) {
             console.log('Unable to connect to server');
         } else {
             var collection = db.collection('posts');
-            collection.find({ _id: ObjectId(req.params.id) }).toArray(function(err, content) {
+            collection.find({ slug: req.params.slug }).toArray(function(err, content) {
                 if (err) {
                     send(err);
                 } else {
-                    timeStamp = content[0].dateAdded;
-                    content[0].dateAdded = dateFormat(timeStamp, "dddd, mmmm dS yyyy");
+                    timeStamp = content[0].createdAt;
+                    content[0].createdAt = dateFormat(timeStamp, "dddd, mmmm dS yyyy");
                     res.render('blog/show', {
                         post: content
                     });

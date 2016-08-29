@@ -1,22 +1,51 @@
 <div class="content">
     <h1> {{title}} </h1>
-    <div class="inner-content">
+    <div class="inner-content projects">
         <h2 class="project-title border-bottom">Web Applications</h2>
-        <div class="project-box">
-            <a href="/project/{{_id}}">
-                <h2>
-                    <div>
-                    <img src="/images/icons/right-arrow.svg" class="blog-icon" />
-                    <span class="animateHover">Real Time Budgeting App</span>
-                    </div>
-                </h2>
-            </a>
-            <p> It's not a "time" budgeting app but it's real time! </p>
-        </div>
-        {{> dada}}
+
+        {{#list 0 2 projects}}
+            <div class="project-box">
+                <a href="/projects/{{this.slug}}">
+                    <h2>
+                        <div>
+                        <img src="/images/icons/right-arrow.svg" class="blog-icon" />
+                        <span class="animateHover">{{this.title}}</span>
+                        </div>
+                    </h2>
+                </a>
+                <p> {{this.description}}</p>
+            </div>
+        {{/list}}
+
         <h2 class="project-title border-bottom">Tools</h2>
-        <!-- Weather app? -->
-        {{> sorter}} {{> autopublisher}}
-        <h2 class="project-title border-bottom"> Miscellaneous</h2> {{> whatAngle}} {{> softcolors}} {{> housesontrees}} {{> voterfraud}}
+        {{#list 2 4 projects}}
+            <div class="project-box">
+                <a href="/projects/{{this.slug}}">
+                    <h2>
+                        <div>
+                        <img src="/images/icons/right-arrow.svg" class="blog-icon" />
+                        <span class="animateHover">{{this.title}}</span>
+                        </div>
+                    </h2>
+                </a>
+                <p> {{this.description}} </p>
+            </div>
+        {{/list}}
+
+        <h2 class="project-title border-bottom"> Miscellaneous</h2> 
+        {{#list 4 projects.length projects}}
+            <div class="project-box">
+                <a href="/projects/{{this.slug}}">
+                    <h2>
+                        <div>
+                        <img src="/images/icons/right-arrow.svg" class="blog-icon" />
+                        <span class="animateHover">{{this.title}} </span>
+                        </div>
+                    </h2>
+                </a>
+                <p> {{this.description}} </p>
+            </div>
+        {{/list}}
+
     </div>
 </div>

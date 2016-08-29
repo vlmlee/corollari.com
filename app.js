@@ -40,6 +40,14 @@ filenames.forEach(function(filename) {
     hbs.registerPartial(name, template);
 });
 
+hbs.registerHelper('list', function(from, to, context, options) {
+    var item = "";
+    for (var i = from, j = to; i < j; i++) {
+        item = item + options.fn(context[i]);
+    }
+    return item;
+});
+
 app.use(favicon(path.join(__dirname, 'public', 'images', 'favicon.ico')));
 app.use(logger('dev'));
 app.use(bodyParser.json());

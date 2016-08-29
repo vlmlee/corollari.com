@@ -1,0 +1,11 @@
+<div class="content">
+    {{#each project}}
+        <h1> {{title}} </h1>
+        <div class="inner-content projects">
+            <h2>{{this.title}}</h2>
+            <p> {{{this.description}}}</p>
+      		<a href="http://{{this.url}}">{{this.url}}</a>
+            <p>{{this.body}}</p>
+        </div>
+    {{/each}}
+</div>
