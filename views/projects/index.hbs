@@ -1,16 +1,14 @@
 <div class="project-content">
     <h1> {{title}} </h1>
-    <div class="inner-content">
-        {{#list 0 projects.length projects}}
-            <div class="project-box">
-                <a href="/projects/{{this.slug}}">
-                    <h2>
-                        <div>{{this.title}}
-                        </div>
-                    </h2>
-                </a>
-                <p> {{this.description}}</p>
-            </div>
-        {{/list}}
-    </div>
+    {{#list 0 projects.length projects}}
+        <div class="project-box {{this.class}}">
+            <a href="{{this.url}}">
+                <h2>
+                    <div>{{this.title}}
+                    </div>
+                </h2>
+            </a>
+            <p> {{this.description}}</p>
+        </div>
+    {{/list}}
 </div>
