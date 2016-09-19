@@ -22,6 +22,7 @@ router.get('/', function(req, res, next) {
                         content[i].createdAt = dateFormat(timeStamp, "dddd, mmmm dS yyyy");
                     }
                     res.render('blog/index', {
+                        title: 'Blog Posts',
                         posts: content
                     });
                 } else {
@@ -46,6 +47,7 @@ router.get('/:slug', function(req, res) {
                     timeStamp = content[0].createdAt;
                     content[0].createdAt = dateFormat(timeStamp, "dddd, mmmm dS yyyy");
                     res.render('blog/show', {
+                        title: 'Blog Posts',
                         post: content
                     });
                 }

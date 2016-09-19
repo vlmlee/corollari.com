@@ -1,51 +1,16 @@
-<div class="content">
+<div class="project-content">
     <h1> {{title}} </h1>
-    <div class="inner-content projects">
-        <h2 class="project-title border-bottom">Web Applications</h2>
-
-        {{#list 0 2 projects}}
+    <div class="inner-content">
+        {{#list 0 projects.length projects}}
             <div class="project-box">
                 <a href="/projects/{{this.slug}}">
                     <h2>
-                        <div>
-                        <img src="/images/icons/right-arrow.svg" class="blog-icon" />
-                        <span class="animateHover">{{this.title}}</span>
+                        <div>{{this.title}}
                         </div>
                     </h2>
                 </a>
                 <p> {{this.description}}</p>
             </div>
         {{/list}}
-
-        <h2 class="project-title border-bottom">Tools</h2>
-        {{#list 2 4 projects}}
-            <div class="project-box">
-                <a href="/projects/{{this.slug}}">
-                    <h2>
-                        <div>
-                        <img src="/images/icons/right-arrow.svg" class="blog-icon" />
-                        <span class="animateHover">{{this.title}}</span>
-                        </div>
-                    </h2>
-                </a>
-                <p> {{this.description}} </p>
-            </div>
-        {{/list}}
-
-        <h2 class="project-title border-bottom"> Miscellaneous</h2> 
-        {{#list 4 projects.length projects}}
-            <div class="project-box">
-                <a href="/projects/{{this.slug}}">
-                    <h2>
-                        <div>
-                        <img src="/images/icons/right-arrow.svg" class="blog-icon" />
-                        <span class="animateHover">{{this.title}} </span>
-                        </div>
-                    </h2>
-                </a>
-                <p> {{this.description}} </p>
-            </div>
-        {{/list}}
-
     </div>
 </div>

@@ -8,24 +8,23 @@ var MongoClient = mongodb.MongoClient,
 
 router.get('/', function(req, res, next) {
 
-    res.render('under-construction');
-	// MongoClient.connect(url, function(err, db) {
-	// 	if (err) {
- //            console.log('Unable to connect to server');
- //        } else {
- //            var collection = db.collection('projects');
+	MongoClient.connect(url, function(err, db) {
+		if (err) {
+            console.log('Unable to connect to server');
+        } else {
+            var collection = db.collection('projects');
 
- //            collection.find({}).toArray(function(err, content) {
- //                if (err) send(err);
+            collection.find({}).toArray(function(err, content) {
+                if (err) send(err);
 
- //                res.render('projects/index', {
- //                	title: 'Recent Work',
- //                    projects: content
- //                });
- //                db.close();
- //            });
- //        }
-	// });
+                res.render('projects/index', {
+                	title: 'Recent Work',
+                    projects: content
+                });
+                db.close();
+            });
+        }
+	});
 });
 
 router.get('/:slug', function(req, res, next) {

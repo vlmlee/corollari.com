@@ -82,6 +82,7 @@ To search for content, use # before the section and enter the section with no sp
     text-align: left;
 }
 
+
 /* #FONTS */
 
 @font-face {
@@ -102,6 +103,7 @@ To search for content, use # before the section and enter the section with no sp
     font-weight: normal;
 }
 
+
 /* #FONTSTYLES */
 
 em {
@@ -111,6 +113,7 @@ em {
 strong {
     font-weight: bolder;
 }
+
 
 /*------------------*\
     #ICONS
@@ -176,6 +179,13 @@ strong {
     margin-right: 10px;
 }
 
+.block {
+    display: block;
+    margin: 0 auto 0 17.5%;
+    height: 500px;
+    width: 500px;
+}
+
 
 /* #RESUMEICONS */
 
@@ -234,6 +244,22 @@ main {
     left: 60%;
     top: 205px;
     transform: translate(-60%, 0);
+}
+
+.project-content {
+    width: 100%;
+    margin: 0 auto;
+    word-wrap: break-word;
+    padding-top: 310px;
+}
+
+.project-content h1 {
+    color: #ffffff;
+    font-weight: 500;
+    position: absolute;
+    left: 62%;
+    top: 205px;
+    transform: translate(-62%, 0);
 }
 
 .inner-content {
@@ -425,7 +451,9 @@ a:hover {
     line-height: 1.3em;
 }
 
+
 /* #ABOUT */
+
 
 /* #PROJECTS */
 
@@ -440,42 +468,41 @@ a:hover {
 /* Change later to generic boxes */
 
 .project-box {
-    width: 100%;
-    margin: 40px 0 0 0;
+    display: inline-block;
+    vertical-align: top;
+    height: 350px;
+    width: 350px;
+    color: #fff;
+    text-align: center;
+    margin: 30px 20px 30px 60px;
+    background-color: #666;
+    font-family: Aller;
+    transition: background-color .5s ease-in-out, transform .4s ease-in-out;
 }
 
-.project-box:last-child {
-    margin-bottom: 60px;
-}
-
-.project-title:not(:first-child) {
-    margin-top: 60px;
+.project-box:hover {
+    background-color: #444;
+    transform: scale(1.05, 1.05);
 }
 
 .project-box h2 {
+    color: #fff;
     font-size: 26px;
-    font-weight: 300;
+    margin-top: 140px;
     margin-bottom: 2px;
+    padding: 0 5px;
 }
 
 .project-box p {
     font-style: italic;
     line-height: 1.4em;
-    margin-left: 36px;
+    padding: 0 20px;
 }
 
-.uc {
-    text-align: center;
-}
-
-.uc img {
-    width: 500px;
-    height: 500px;
-}
 
 /* #BLOG */
 
-.blog-index-item, .projects {
+.blog-index-item {
     width: 90%;
     margin: 0 auto;
 }
@@ -519,7 +546,7 @@ a:hover {
 }
 
 .blog-body {
-    font-family: 'Proxima Nova';
+    font-family: 'Proxima Nova', 'PT Sans', Montserrat;
     color: #444;
     font-size: 1.1em;
     margin: 25px auto;
@@ -538,10 +565,10 @@ a:hover {
 }
 
 .tab-size {
-  -webkit-tab-size: 4 !important;
-     -moz-tab-size: 4 !important;
-       -o-tab-size: 4 !important;
-          tab-size: 4 !important;
+    -webkit-tab-size: 4 !important;
+    -moz-tab-size: 4 !important;
+    -o-tab-size: 4 !important;
+    tab-size: 4 !important;
 }
 
 .quote {
@@ -567,10 +594,10 @@ a:hover {
     padding: 0 0 15px 40px;
 }
 
-.list li
-{
+.list li {
     display: list-item;
 }
+
 
 /* #GIST */
 
@@ -578,6 +605,7 @@ a:hover {
     margin: 30px auto;
     width: 75%;
 }
+
 
 /* #RESUME */
 
@@ -753,6 +781,7 @@ textarea {
     padding: 25px 0;
 }
 
+
 /*------------------*\
     #ANIMATION
 \*------------------*/
@@ -779,7 +808,7 @@ textarea {
     .index-copy {
         margin-top: 60px;
     }
-    .content h1 {
+    .project-content h1, .content h1 {
         left: 50%;
         transform: translate(-50%, 0);
     }
@@ -787,6 +816,9 @@ textarea {
         width: 100%;
         display: block;
         text-align: center;
+    }
+    .project-box {
+        margin: 30px 10px 30px 40px;
     }
 }
 
