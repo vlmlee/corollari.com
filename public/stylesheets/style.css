@@ -47,9 +47,11 @@ To search for content, use # before the section and enter the section with no sp
 **/
 
 
-/*------------------*\
-    #GENERIC
-\*------------------*/
+/*
+**************
+** #GENERIC **
+************** 
+*/
 
 .border-bottom {
     border-bottom: 1px solid #ddd;
@@ -83,7 +85,9 @@ To search for content, use # before the section and enter the section with no sp
 }
 
 
-/* #FONTS */
+/********
+  #FONTS 
+*********/
 
 @font-face {
     font-family: Montserrat;
@@ -104,7 +108,9 @@ To search for content, use # before the section and enter the section with no sp
 }
 
 
-/* #FONTSTYLES */
+/*************
+  #FONTSTYLES 
+**************/
 
 em {
     font-style: italic;
@@ -115,12 +121,16 @@ strong {
 }
 
 
-/*------------------*\
-    #ICONS
-\*------------------*/
+/*
+************
+** #ICONS **
+************
+*/
 
 
-/* #BRANDICON */
+/************
+  #BRANDICON 
+*************/
 
 .brand-icon {
     width: 160px;
@@ -132,7 +142,9 @@ strong {
 }
 
 
-/* #SIDEBARICONS */
+/***************
+  #SIDEBARICONS 
+****************/
 
 .sidebar-icon {
     width: 23px;
@@ -142,7 +154,9 @@ strong {
 }
 
 
-/* #SOCIALICONS */
+/**************
+  #SOCIALICONS 
+***************/
 
 .social-icon {
     width: 30px;
@@ -157,7 +171,9 @@ strong {
 }
 
 
-/* #FORMICONS */
+/************
+  #FORMICONS 
+*************/
 
 .form-icon {
     height: 35px;
@@ -170,7 +186,9 @@ strong {
 }
 
 
-/* #BLOGICONS */
+/************
+  #BLOGICONS 
+*************/
 
 .blog-icon {
     display: inline-block;
@@ -187,7 +205,9 @@ strong {
 }
 
 
-/* #RESUMEICONS */
+/**************
+  #RESUMEICONS 
+***************/
 
 .resume-section .resume-icon {
     width: 30px;
@@ -199,9 +219,11 @@ strong {
 }
 
 
-/*------------------*\
-    #BASELAYOUT
-\*------------------*/
+/*
+*****************
+** #BASELAYOUT **
+*****************
+*/
 
 html {
     -webkit-font-smoothing: antialiased;
@@ -272,7 +294,9 @@ main {
 }
 
 
-/* #SIDEBARNAV */
+/*************
+  #SIDEBARNAV 
+**************/
 
 nav {
     width: 20%;
@@ -346,7 +370,9 @@ nav {
 }
 
 
-/* #HEADERIMAGE */
+/**************
+  #HEADERIMAGE 
+***************/
 
 .img-header {
     background-image: url('../images/header.svg');
@@ -365,7 +391,9 @@ nav {
 }
 
 
-/* #HEADINGS */
+/***********
+  #HEADINGS 
+************/
 
 h1 {
     font-family: Montserrat;
@@ -379,7 +407,9 @@ h2 {
 }
 
 
-/* #LINKS */
+/********
+  #LINKS 
+*********/
 
 a {
     color: #444;
@@ -394,7 +424,9 @@ a:hover {
 }
 
 
-/* #LICENSE */
+/**********
+  #LICENSE 
+***********/
 
 .license {
     line-height: 1.4em;
@@ -412,12 +444,16 @@ a:hover {
 }
 
 
-/*------------------*\
-    #TEMPLATES
-\*------------------*/
+/*
+****************
+** #TEMPLATES **
+****************
+*/
 
 
-/* #INDEX */
+/********
+  #INDEX 
+*********/
 
 .wrapper {
     width: 100%;
@@ -453,10 +489,14 @@ a:hover {
 }
 
 
-/* #ABOUT */
+/********
+  #ABOUT 
+*********/
 
 
-/* #PROJECTS */
+/***********
+  #PROJECTS 
+************/
 
 .project-title {
     font-family: Montserrat;
@@ -464,9 +504,6 @@ a:hover {
     color: #444;
     padding-bottom: 2px;
 }
-
-
-/* Change later to generic boxes */
 
 .project-box {
     display: inline-block;
@@ -485,6 +522,7 @@ a:hover {
 .project-box:hover {
     background-color: #444;
     transform: scale(1.05, 1.05);
+    cursor: pointer;
 }
 
 .project-box h2 {
@@ -501,37 +539,17 @@ a:hover {
     padding: 0 20px;
 }
 
-.softcolor {
-    background-image: url(../images/projects/softcolors.png);
-    background-size: 100%;
+/*********************
+  #SPECIFICPROJECTBOX
+**********************/
+
+.picture-chat {
+    background-image: url(../images/projects/picturechat.png);
+    background-size: cover;
 }
 
-.softcolor:hover {
-    color: #fff;
-}
-
-.whatangle {
-    background-image: url(../images/projects/clock.png);
-    background-size: 100%;
-    background-repeat: no-repeat;
-}
-
-.softcolor:hover {
-    color: #fff;
-}
-
-.root-finding {
-    background-image: url(../images/projects/root-finding.png);
-    background-size: 200%;
-    background-position: left center;
-}
-
-.house {
-    background-image: url(../images/projects/house.png);
-    background-size: 100%;
-    background-color: #222;
-    background-position: 40% 50%;
-    background-repeat: no-repeat;
+.picture-chat p {
+    padding-top: 60px;
 }
 
 .got {
@@ -544,17 +562,50 @@ a:hover {
     color: #222;
 }
 
+.reddit-bot {
+    background-image: url(../images/projects/reddit.png);
+    background-size: 100%;
+}
+
+.whatangle {
+    background-image: url(../images/projects/clock.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.softcolor {
+    background-image: url(../images/projects/softcolors.png);
+    background-size: 100%;
+}
+
+.softcolor:hover {
+    color: #fff;
+}
+
+.house {
+    background-image: url(../images/projects/house.png);
+    background-size: 100%;
+    background-color: #222;
+    background-position: 40% 50%;
+    background-repeat: no-repeat;
+}
+
 .comp-sci {
     background-image: url(../images/projects/compsci.png);
     background-size: 120%;
     background-position: center;
 }
 
-.reddit-bot {
-    background-image: url(../images/projects/reddit.png);
-    background-size: 100%;
+.root-finding {
+    background-image: url(../images/projects/root-finding.png);
+    background-size: 200%;
+    background-position: left center;
 }
-/* #BLOG */
+
+
+/*******
+  #BLOG 
+********/
 
 .blog-index-item {
     width: 90%;
@@ -653,7 +704,9 @@ a:hover {
 }
 
 
-/* #GIST */
+/*******
+  #GIST 
+********/
 
 .gist {
     margin: 30px auto;
@@ -661,7 +714,9 @@ a:hover {
 }
 
 
-/* #RESUME */
+/*********
+  #RESUME 
+**********/
 
 .resume-name {
     font-family: Montserrat;
@@ -732,7 +787,9 @@ p.resume-summary {
 }
 
 
-/* #CONTACT */
+/**********
+  #CONTACT 
+***********/
 
 input:focus,
 select:focus,
@@ -791,12 +848,16 @@ textarea {
 }
 
 
-/*------------------*\
-    #MEDIA
-\*------------------*/
+/*
+************
+** #MEDIA **
+************
+*/
 
 
-/* #PHOTO */
+/********
+  #PHOTO 
+*********/
 
 .photo {
     float: right;
@@ -811,7 +872,9 @@ textarea {
 }
 
 
-/* #VIDEO */
+/********
+  #VIDEO 
+*********/
 
 .embed-video {
     display: block;
@@ -836,12 +899,15 @@ textarea {
 }
 
 
-/*------------------*\
-    #ANIMATION
-\*------------------*/
+/*
+****************
+** #ANIMATION **
+****************
+*/
 
-
-/* WINDOW RESIZING */
+/*****************
+  WINDOW RESIZING 
+******************/
 
 @media (max-width: 1000px) {
     nav {

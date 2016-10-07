@@ -30,26 +30,26 @@ function animateChevron() {
     });
 }
 
-function loadGists(){
+function loadGists() {
     var $gists = $('.blog-post').find('script[src^="https://gist.github.com/"]');
 
     // if gist embeds are found
-    if( $gists.length ){
+    if ($gists.length) {
 
         // update each gist
-        $gists.each(function(){
+        $gists.each(function() {
 
             // we need to store $this for the callback
             var $this = $(this);
 
             // load gist as json instead with a jsonp request
-            $.getJSON( $this.attr('src') + 'on?callback=?', function( data ) {
+            $.getJSON($this.attr('src') + 'on?callback=?', function(data) {
 
                 // replace script with gist html
-                $this.replaceWith( $( data.div ) );
+                $this.replaceWith($(data.div));
 
                 // load the stylesheet, but only once…
-                add_stylesheet_once( data.stylesheet )
+                add_stylesheet_once(data.stylesheet)
 
             });
 
@@ -58,10 +58,10 @@ function loadGists(){
     }
 }
 
-function add_stylesheet_once( url ){
+function add_stylesheet_once(url) {
     $head = $('head');
-    if( $head.find('link[rel="stylesheet"][href="'+url+'"]').length < 1 )
-        $head.append('<link rel="stylesheet" href="'+ url +'" type="text/css" />');
+    if ($head.find('link[rel="stylesheet"][href="' + url + '"]').length < 1)
+        $head.append('<link rel="stylesheet" href="' + url + '" type="text/css" />');
 }
 
 $(document).ready(function() {
@@ -80,6 +80,10 @@ $(document).ready(function() {
                     resizeFix($(this).width());
                 });
             });
+            $('.project-box').click(function() {
+                window.location = $(this).find("a").attr("href");
+                return false;
+            });
         },
         blacklist: ['.blog-post']
     });
@@ -91,5 +95,9 @@ $(document).ready(function() {
         $(window).resize(function() {
             resizeFix($(this).width());
         });
+    });
+    $('.project-box').click(function() {
+        window.location = $(this).find("a").attr("href");
+        return false;
     });
 });
