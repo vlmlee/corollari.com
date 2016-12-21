@@ -1,3 +1,4 @@
+'use strict';
 const express = require('express'),
     expressSanitized = require('express-sanitized'),
     path = require('path'),
