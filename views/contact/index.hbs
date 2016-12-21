@@ -1,25 +1,13 @@
 <div class="content">
     <h1>{{title}}</h1>
-    <h2 class="strong center">{{msg}}</h2>
+    <h2 class="strong center contact">{{msg}}</h2>
     <div class="inner-content">
         <form action="/contact/sendemail" method="post">
-            <div>
-                <p><img src="../images/icons/emoji-happy.svg" class="form-icon hvr-push" />
-                    <input type="text" name="name" placeholder="Name" />
-                </p>
-            </div>
-            <p><img src="../images/icons/message.svg" class="form-icon hvr-push" />
-                <input type="text" name="email" placeholder="Email" />
-            </p>
-            <p><img src="../images/icons/im-icon.svg" class="form-icon form-icon-message hvr-push" />
-                <input type="text" name="subject" placeholder="Subject" />
-            </p>
-            <p>
-                <textarea name="bodytext" placeholder="Say something..."></textarea>
-            </p>
-            <div class="hvr-buzz-out">
-                <input type="submit" value="Send" />
-            </div>
+            <input type="text" class="hvr-grow" name="name" placeholder="Name" />
+            <input type="text" class="hvr-grow" name="email" placeholder="Email" />
+            <input type="text" class="hvr-grow" name="subject" placeholder="Subject" />
+            <textarea name="bodytext" class="hvr-grow" placeholder="Say something..."></textarea>
+            <input type="submit" class="hvr-buzz-out" value="Send" />
         </form>
     </div>
 </div>

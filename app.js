@@ -1,4 +1,4 @@
-var express = require('express'),
+const express = require('express'),
     expressSanitized = require('express-sanitized'),
     path = require('path'),
     favicon = require('serve-favicon'),
@@ -10,14 +10,14 @@ var express = require('express'),
     fs = require('fs');
 
 // "controllers"
-var routes = require('./routes/index'),
+const routes = require('./routes/index'),
     users = require('./routes/users'),
     projects = require('./routes/projects'),
     blog = require('./routes/blog'),
     resume = require('./routes/resume'),
     contact = require('./routes/contact');
 
-var app = express();
+let app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -27,16 +27,16 @@ app.set('view engine', 'hbs');
 app.use(compress());
 
 // loads Handlebars partials
-var partialsDir = __dirname + '/views/partials',
+const partialsDir = __dirname + '/views/partials',
     filenames = fs.readdirSync(partialsDir);
 
 filenames.forEach(function(filename) {
-    var matches = /^([^.]+).hbs$/.exec(filename);
+    const matches = /^([^.]+).hbs$/.exec(filename);
     if (!matches) {
         return;
     }
-    var name = matches[1];
-    var template = fs.readFileSync(partialsDir + '/' + filename, 'utf8');
+    const name = matches[1];
+    const template = fs.readFileSync(partialsDir + '/' + filename, 'utf8');
     hbs.registerPartial(name, template);
 });
 
