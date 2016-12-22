@@ -542,6 +542,10 @@ a:hover {
     padding-top: 60px;
 }
 
+.latex-preview {
+    background-color: #EAFFEA;
+}
+
 .got {
     background-image: url(../images/projects/flat.jpg);
     background-size: 100%;
