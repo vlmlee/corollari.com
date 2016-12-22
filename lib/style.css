@@ -544,6 +544,19 @@ a:hover {
 
 .latex-preview {
     background-color: #EAFFEA;
+    color: #222;
+}
+
+.latex-preview h2 {
+    color: #222;
+}
+
+.latex-preview:hover {
+    color: #fff;
+}
+
+.latex-preview:hover .box-icon-title {
+    color: #fff;
 }
 
 .got {
@@ -574,10 +587,6 @@ a:hover {
 .softcolor {
     background-image: url(../images/projects/softcolors.png);
     background-size: 100%;
-}
-
-.softcolor:hover {
-    color: #fff;
 }
 
 .house {
