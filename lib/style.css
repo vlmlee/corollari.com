@@ -502,6 +502,7 @@ a:hover {
     width: 350px;
     color: #fff;
     text-align: center;
+    border-radius: 3px;
     margin: 30px 20px 30px 60px;
     box-shadow: 0px 0px 2px 2px #e9e9e9;
     background-color: #666;
@@ -532,6 +533,23 @@ a:hover {
 /*********************
   #SPECIFICPROJECTBOX
 **********************/
+
+.costrakr {
+    background-color: #4bea83;
+    color: #222;
+}
+
+.costrakr h2 {
+    color: #222;
+}
+
+.costrakr:hover {
+    color: #fff;
+}
+
+.costrakr:hover h2 {
+    color: #fff;
+}
 
 .picture-chat {
     background-image: url(../images/projects/picturechat.png);
@@ -810,7 +828,7 @@ form {
     height: 100%;
     margin: 70px auto 0 auto;
     min-width: 650px;
-    font-family: Raleway;
+    font-family: 'Open Sans';
     font-size: 12px;
 }
 
@@ -848,7 +866,7 @@ textarea {
 }
 
 .contact {
-    font-family: Muli;
+    /*font-family: Muli;*/
 }
 
 /*
