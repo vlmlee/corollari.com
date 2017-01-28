@@ -11,7 +11,7 @@ router.post('/sendemail', function(req, res, next) {
     var transporter = nodemailer.createTransport({
         service: 'Gmail',
         auth: {
-            user: 'sendmeanemail307@gmail.com',
+            user: 'emailmecorollari@gmail.com',
             pass: password
         }
     });
@@ -19,7 +19,7 @@ router.post('/sendemail', function(req, res, next) {
     var mailOptions = {
         from: req.body.name + ' &lt;' + req.body.email +
             '&gt;',
-        to: 'mlee@vellichorlabs.com',
+        to: 'vlmlee2@gmail.com',
         subject: req.body.subject,
         text: req.body.bodytext
     };
