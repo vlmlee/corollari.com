@@ -551,6 +551,11 @@ a:hover {
     color: #fff;
 }
 
+.parse {
+    background-color: #222c3f;
+    color: #fff;
+}
+
 .picture-chat {
     background-image: url(../images/projects/picturechat.png);
     background-size: cover;
@@ -558,6 +563,11 @@ a:hover {
 
 .picture-chat p {
     padding-top: 60px;
+}
+
+.posdict {
+    background-color: #cb3837;
+    color: #fff;
 }
 
 .latex-preview {
