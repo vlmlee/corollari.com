@@ -107,6 +107,19 @@ To search for content, use # before the section and enter the section with no sp
     font-weight: normal;
 }
 
+@font-face {
+    font-family: Proxima Nova;
+    src: local("Proxima Nova Condensed Regular"), url(../fonts/Proxima Nova Condensed Regular.otf);
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: Game of Thrones;
+    src: local("Game of Thrones"), url(../fonts/Game of Thrones.ttf);
+    font-weight: normal;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Share+Tech+Mono|Playfair+Display|Sansita|Barrio');
 
 /*************
   #FONTSTYLES 
@@ -143,7 +156,7 @@ strong {
 
 
 /***************
-  #SIDEBARICONS 
+  #SIDEBARICONS
 ****************/
 
 .sidebar-icon {
@@ -485,7 +498,7 @@ a:hover {
 
 
 /***********
-  #PROJECTS 
+  #PROJECTS
 ************/
 
 .project-title {
@@ -535,12 +548,17 @@ a:hover {
 **********************/
 
 .costrakr {
-    background-color: #4bea83;
-    color: #222;
+    background-color: #66e894;
+    color: #333;
 }
 
 .costrakr h2 {
-    color: #222;
+    color: #333;
+    font-weight: 400;
+    font-size: 40px;
+    font-family: 'Sansita';
+    margin-bottom: 10px;
+    letter-spacing: 2px;
 }
 
 .costrakr:hover {
@@ -565,9 +583,44 @@ a:hover {
     padding-top: 60px;
 }
 
-.posdict {
-    background-color: #cb3837;
+.parseparts {
+    background-color: #222c3f;
+}
+
+.parseparts h2 {
     color: #fff;
+    font-weight: 400;
+    font-size: 38px;
+    font-family: 'Playfair Display';
+    margin-bottom: 10px;
+}
+
+.pos-dict {
+    background-color: #cb5251;
+    color: #fff;
+}
+
+.pos-dict h2 {
+    color: #fff;
+    font-weight: 400;
+    font-size: 38px;
+    font-family: 'Playfair Display';
+    margin-bottom: 10px;
+}
+
+.tube-vent {
+    background-color: #6495ed;
+    color: white;
+}
+
+.tube-vent h2 {
+    color: #fff;
+    font-weight: 600;
+    font-size: 40px;
+    font-family: 'Share Tech Mono';
+    margin-bottom: 10px;
+    margin-top: 120px;
+    letter-spacing: 0.5px;
 }
 
 .latex-preview {
@@ -577,6 +630,10 @@ a:hover {
 
 .latex-preview h2 {
     color: #222;
+    font-family: 'Proxima Nova';
+    font-weight: 400;
+    font-size: 44px;
+    margin-bottom: 5px;
 }
 
 .latex-preview:hover {
@@ -595,11 +652,18 @@ a:hover {
 
 .got h2 {
     color: #222;
+    font-family: 'Game of Thrones';
+    margin-bottom: 10px;
 }
 
 .reddit-bot {
     background-image: url(../images/projects/reddit.png);
     background-size: 100%;
+}
+
+.reddit-bot h2 {
+    font-size: 34px;
+    margin-bottom: 10px;
 }
 
 .whatangle {
@@ -610,6 +674,19 @@ a:hover {
 
 .psp {
     background-color: #6f93ad;
+}
+
+.psp h2 {
+    color: #222;
+    font-family: 'Barrio';
+    font-weight: 400;
+    font-size: 44px;
+    margin-bottom: 5px;
+    margin-top: 115px;
+}
+
+.psp:hover h2 {
+    color: white;
 }
 
 .softcolor {
