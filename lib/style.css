@@ -493,9 +493,17 @@ a:hover {
 
 
 /********
-  #ABOUT 
+  #ABOUT
 *********/
 
+.about-me {
+    font-family: 'Open Sans', 'Proxima Nova', 'PT Sans', Montserrat;
+    color: #444;
+    margin: 25px auto;
+    opacity: 0.85;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+}
 
 /***********
   #PROJECTS
@@ -716,7 +724,7 @@ a:hover {
 
 
 /*******
-  #BLOG 
+  #BLOG
 ********/
 
 .blog-index-item {
@@ -763,12 +771,12 @@ a:hover {
 }
 
 .blog-body {
-    font-family: 'Proxima Nova', 'PT Sans', Montserrat;
+    font-family: 'Open Sans', 'Proxima Nova', 'PT Sans', Montserrat;
     color: #444;
-    font-size: 1.1em;
     margin: 25px auto;
     opacity: 0.85;
-    line-height: 1.2em;
+    font-weight: 600;
+    letter-spacing: 0.3px;
 }
 
 .blog-body p {
