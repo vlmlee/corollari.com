@@ -91,35 +91,33 @@ To search for content, use # before the section and enter the section with no sp
 
 @font-face {
     font-family: Montserrat;
-    src: local("Montserrat"), local("Montserrat"), url(../fonts/Montserrat-Regular.otf);
+    src: local("Montserrat"), local("Montserrat"), url('../fonts/Montserrat-Regular.otf');
     font-weight: normal;
 }
 
 @font-face {
     font-family: Gotham;
-    src: local("Gotham"), local("Gotham"), url(../fonts/gotham-book.ttf);
+    src: local("Gotham"), local("Gotham"), url('../fonts/gotham-book.ttf');
     font-weight: normal;
 }
 
 @font-face {
     font-family: Fira Mono;
-    src: local("Fira Mono"), local("Fira Mono"), url(../fonts/FiraMono-Medium.otf);
+    src: local("Fira Mono"), local("Fira Mono"), url('../fonts/FiraMono-Medium.otf');
     font-weight: normal;
 }
 
 @font-face {
     font-family: Proxima Nova;
-    src: local("Proxima Nova Condensed Regular"), url(../fonts/Proxima Nova Condensed Regular.otf);
+    src: local("Proxima Nova Condensed Regular"), url('../fonts/Proxima Nova Condensed Regular.otf');
     font-weight: normal;
 }
 
 @font-face {
     font-family: Game of Thrones;
-    src: local("Game of Thrones"), url(../fonts/Game of Thrones.ttf);
+    src: local("Game of Thrones"), url('../fonts/Game of Thrones.ttf');
     font-weight: normal;
 }
-
-@import url('https://fonts.googleapis.com/css?family=Share+Tech+Mono|Playfair+Display|Sansita|Barrio');
 
 /*************
   #FONTSTYLES 
